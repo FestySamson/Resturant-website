@@ -1,0 +1,631 @@
+@import 'fonts.css';
+@import 'media.css';
+@import "dishes.css";
+@import "reviews.css";
+@import 'chefs.css';
+@import 'never.css';
+@import "footer.css";
+@import 'about.css';
+
+
+html {
+    scroll-behavior: smooth;
+}
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --primary-color:rgb(255, 250, 250);
+    --secondary-color:#000;
+    --color-three:rgb(36, 34, 34);
+    --color-four:rgb(48, 47, 47);
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    --bar-color:rgb(255, 223, 223);
+}
+.dark{
+    --primary-color:#000;
+    --secondary-color:#fff;
+    --color-three:whitesmoke;
+    --color-four:#fff;
+    --bar-color:gold;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: 1s all ease-in-out;
+}
+#container{
+    width: 100%;
+}
+.my-header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    position: relative;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.nav-link{
+    width: 300px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 110px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 20;
+    transition: 0.5s all ease-in-out;
+    opacity: 0;
+}
+.nav-link.active{
+    opacity: 1;
+}
+.nav-link nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-link nav ul li{
+    margin-top: 25px;
+    list-style-type: none;
+}
+.nav-link nav ul li:hover{
+    background-color: goldenrod;
+}
+.nav-link nav ul li a{
+    font-family: fontA;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+.cart{
+    margin-bottom: 20px;
+}
+.shop{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.shop button{
+    padding: 6px 15px;
+    background-color: gold;
+    border: none;
+    border-radius: 15px;
+    color: var(--secondary-color);
+    font-family: fontA;
+    cursor: pointer;
+}
+.shop span{
+    cursor: pointer;
+}
+.icon{
+    margin-bottom: 20px;
+    color: black;
+    cursor: pointer;
+}
+#btn{
+    height: 40px;
+    padding: 0 10px;
+    background:transparent;
+    border: none;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+.serve{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+    gap: 30px;
+}
+.we{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+.p p{
+    font-size: 2.06rem;
+    font-family: fontC;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+.this{
+    margin-top: 20px;
+}
+.this p{
+    font-family: fontA;
+    line-height: 1.7;
+    color: var(--color-three);
+}
+.exp{
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+}
+.exp button{
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    font-family: fontA;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: gold;
+    color: var(--color-three);
+    outline: none;
+}
+#b{
+    background: none;
+    border: 1px solid gold;
+}
+.food{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.first{
+    width: 200px;
+    height: 250px;
+}
+.first img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.otherfood{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.di{
+    width: 80%;
+    height: 40px;
+    border-radius: 50px;
+    padding: 2px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+.im{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    margin-top: 3px;
+}
+.im img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.im p{
+    font-family: fontC;
+    font-size: 15px;
+}
+
+
+.pop{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+.our{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.our p{
+    font-family: fontB;
+    font-size: 25px;
+    color: var(--color-three);
+}
+
+.dishes{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+   /* flex-direction: row;*/
+    gap: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    height: auto;
+    padding: 10px;
+   /* background-color: goldenrod;*/
+    box-sizing: border-box;
+  /*  height: 350px;*/
+}
+.arrow{
+    display: none;
+    gap: 5px;
+
+}
+.arrow span{
+    padding: 7px;
+    text-align: center;
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+    color: var(--secondary-color);
+}
+.gold{
+    background-color: goldenrod;
+    border: none;
+}
+
+
+.mult{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.all{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.se{
+    width: 300px;
+}
+.se p{ 
+    font-size: 25px;
+    font-family: fontC;
+    color: var(--secondary-color);
+}
+.text{
+    width: 320px;
+    overflow: hidden;
+}
+.text p{
+    font-family: fontA;
+    line-height: 1.5;
+    color: var(--color-four);
+    text-align: justify;
+}
+.ser{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.one{
+    width: 45%;
+    height: 34px;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+.one p{
+    font-size: 15px;
+    font-family: fontC;
+    color: var(--secondary-color);
+}
+.sma{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.sma img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.bbt button{
+    padding: 10px 20px;
+    background-color: gold;
+    color: var(--secondary-color);
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    font-family: fontC;
+}
+.cheff{
+    width: 95%;
+    height: 350px;
+}
+.cheff img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background: transparent;
+}
+#Menu{
+    padding: 10px;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+.reg{
+    width: 70%;
+    display: flex;
+}
+.ppp p{
+    font-family: fontB;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+.meal{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    
+}
+.meal input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: var(--box-shadow);
+    outline: none;
+    border-radius: 50px;
+    background: #fff;
+    text-align: center;
+    border: none;
+    color: black;
+}
+.meal input::placeholder{
+    padding: 0 10px;
+}
+.meal::before{
+    content: '';
+    position: absolute;
+    left:150px;
+    z-index: 100;
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    border-top: transparent;
+    border-right: transparent;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.option{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 0;
+    box-shadow: var(--box-shadow);
+    height: 0;
+    overflow: hidden;
+    transition: 1s all ease-in-out;
+    z-index: 100;
+}
+.show{
+    height: auto;
+    padding: 10px;
+}
+.option div{
+    color: black;
+    font-family: fontA;
+    width: 100%;
+    padding: 10px;
+}
+.option div:hover{
+    background: gold;
+    color: white;
+}
+
+@media  screen and (min-width:600px) {
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+
+    .my-header{
+        position: initial;
+        padding: 15px 15px;
+        justify-content: space-around;
+    }
+    .nav-link{
+        position: static;
+        top: 0;
+        left: 0;
+        background: none;
+        width: auto;
+        flex-direction: row;
+        z-index: 0;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        transition: none;
+        opacity: 1;
+    }
+    .nav-link nav ul{
+        display: flex;      
+        position:initial; 
+    }
+    .nav-link nav ul li{
+        margin-right: 40px;
+    }
+    .nav-link nav ul li a{
+        font-size: 20px;
+        color: var(--secondary-color);
+    }
+    .nav-link nav ul li:hover{
+        background:none;
+    }
+    .icon{
+        margin-bottom: 0;
+        margin-right: 30px;
+        color: var(--secondary-color);
+    }
+    .cart{
+        position: initial !important;
+        margin-bottom: 0;
+        margin-right: 30px;
+        color: var(--secondary-color);
+    }
+    .shop{
+        position: initial;
+        left: 0;
+        margin-bottom: 0;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+    #btn{
+        display: none;
+    }
+    .shop button{
+        padding: 10px 25px;
+    }
+    .our{
+        padding: 0 40px;
+    }
+    .arrow{
+        display: block;
+    }
+
+    .we{
+        width: 45%;
+        margin-top: 0;
+    }
+    .p p{
+        font-size: 2.5rem;
+    }
+    .food{
+        width: 45%;
+        margin-top: 0;
+    }
+    .serve{
+        margin-top: 0;
+    }
+    .all{
+        width: 50%;
+    }
+    .cheff{
+        width: 40%;
+        height: 500px;
+    }
+    .mult{
+        flex-direction: row-reverse;
+        gap: 60px;
+    }
+    .reg{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .meal input{
+        display: none;
+    }
+    .meal::before{
+        display: none;
+        z-index: 0;
+    }
+    .option{
+        flex-direction: row;
+        height: auto;
+        position: initial;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+        width: auto;
+        gap: 40px;
+    }
+    .option div{
+        padding: 7px 24px;
+        color: var(--secondary-color);
+        border: 2px solid gold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+    .dishes{
+        flex-wrap: wrap;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+    .card1{
+        width: 250px;
+    }
+}
+@media screen and (min-width:768px) {
+    .we{
+        width: 25%;
+    }
+    .first{
+        width:400px;
+        height: 450px;
+    }
+}

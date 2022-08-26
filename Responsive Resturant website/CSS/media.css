@@ -1,0 +1,93 @@
+@import 'fonts.css';
+
+:root{
+    --primary-color:rgb(255, 248, 248);
+    --secondary-color:#000;
+    --color-three:rgb(36, 34, 34);
+    --color-four:rgb(48, 47, 47);
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.dark{
+    --primary-color:#000;
+    --secondary-color:#fff;
+    --color-three:whitesmoke;
+    --color-four:#fff;
+}
+
+.do{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.do1{
+    width: 90%;
+    height: auto;
+}
+.do1p p{
+    font-size: 25px;
+    font-family: fontB;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+.do2p{
+    margin-top: 20px;
+}
+.do2p p{
+    font-family: fontE;
+    text-align: left;
+    font-size: 15px;
+    color: var(--secondary-color);
+}
+.do3b{
+    margin-top: 20px;
+}
+.do3b button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, gold, white);
+    color: black;
+    font-family: fontB;
+}
+.do2{
+    width: 90%;
+    height: 320px;
+    background-color: rgb(255, 225, 225);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.do2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.none{
+    background: none;
+}
+@media screen and (min-width:600px) {
+    .do1{
+        width: 30%;
+    }
+    .do{
+        justify-content: space-around;
+    }
+    .do2{
+        width: 30%;
+        height: 400px;
+    }
+    .do1p p{
+        font-size: 35px;
+    }
+    .do2p p{
+        font-size: 18px;
+    }
+}

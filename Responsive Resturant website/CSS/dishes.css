@@ -1,0 +1,101 @@
+@import "font.css";
+
+
+
+
+#Menu{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+   /* flex-direction: row;*/
+    gap: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    height: auto;
+    padding: 10px;
+   /* background-color: goldenrod;*/
+    box-sizing: border-box;
+  /*  height: 350px;*/
+}
+.card1{
+    min-width: 250px;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    margin-bottom: 20px;
+    transition: 00.5s all ease-in-out;
+}
+.card1:hover{
+    transform: scale(0.85);
+}
+.off{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    padding: 7px;
+    background-color: gold;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 50%;
+}
+.off p{
+    font-family: fontD;
+}
+.card-img{
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.to p{
+    text-align: center;
+    font-family: fontB;
+    font-size: 20px;
+    color: black;
+}
+.star{
+    text-align: center;
+    margin-top: 10px;
+    color: gold;
+}
+.des{
+    margin-top: 10px;
+}
+.des p{
+    text-align: center;
+    font-size: 12px;
+    font-family: fontA;
+    padding: 0 5px;
+    color: black;
+    line-height: 1.3;
+}
+.add{
+    margin-top: 20px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add p{
+    color: black;
+    font-family: fontC;
+    font-size: 20px;
+}
+.add button{
+    padding: 10px 17px;
+    border-radius: 40px;
+    border: none;
+    background-color: gold;
+    font-family: fontC;
+    outline: none;
+}
